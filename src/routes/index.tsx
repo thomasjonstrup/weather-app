@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import logo from '../assets/images/logo.svg';
-import { SITE } from '@/lib/constants';
+import { OPEN_METEO_URL, SITE } from '@/lib/constants';
 import { DropdownMenu, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { DropdownMenuContent } from '@radix-ui/react-dropdown-menu';
