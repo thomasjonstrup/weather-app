@@ -4,16 +4,24 @@ import { SITE } from '@/lib/constants';
 import { DropdownMenu, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { DropdownMenuContent } from '@radix-ui/react-dropdown-menu';
+import { useEffect } from 'react';
 
 export const Route = createFileRoute('/')({
   component: App,
 })
 
 function App() {
+
+  useEffect(() => {
+    fetch(`${OPEN_METEO_URL}?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`).then(res => res.json()).then(data => {
+      console.log(data);
+    })
+  }, []);
+
   return (
     <div className="min-h-screen bg-background flex flex-col text-foreground text-[calc(10px+2vmin)]">
-      <header className="flex flex-row items-center justify-between gap-4 p-4">
-        <img src={logo} alt="Weather App Logo" />
+      <header className="flex flex-row items-center justify-between gap-4 p-4 px-8">
+        <img src={logo} className='w-40' alt="Weather App Logo" />
 
         <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -33,7 +41,8 @@ function App() {
       </DropdownMenuContent>
         </DropdownMenu>
       </header>
-      <main className='flex-1'>
+      <main className='flex-1 p-4 py-8'>
+        <h1 className='text-center text-4xl'>How's the sky looking today?</h1>
   {/*         Units
 
   Switch to Imperial/Metric

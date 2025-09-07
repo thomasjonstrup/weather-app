@@ -15,3 +15,5 @@ export const NAV_LINKS: NavLink[] = [
 		label: "Home",
 	},
 ];
+
+export const OPEN_METEO_URL = 'https://api.open-meteo.com/v1/forecast'
