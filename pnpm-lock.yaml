@@ -75,6 +75,9 @@ importers:
       husk:
         specifier: 0.5.3
         version: 0.5.3
+      husky:
+        specifier: 9.1.7
+        version: 9.1.7
       jsdom:
         specifier: ^26.0.0
         version: 26.1.0
@@ -1953,6 +1956,11 @@ packages:
 
   husk@0.5.3:
     resolution: {integrity: sha512-4rLByTytY2LtiuyiRQ20C4AmSZ0+/imh1557r92TFcgAgeTgcsVwHlGLi2nO4QNiEKhvhlPj9HuCjKWfwNtwYA==}
+
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -5071,6 +5079,8 @@ snapshots:
       husk-exec: 1.0.4
       husk-fs: 1.0.3
       zephyr: 1.2.8
+
+  husky@9.1.7: {}
 
   iconv-lite@0.6.3:
     dependencies:
