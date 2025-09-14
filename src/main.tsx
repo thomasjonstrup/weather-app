@@ -8,6 +8,11 @@ import { routeTree } from './routeTree.gen'
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 
+// Supports weights 100-900
+import '@fontsource-variable/dm-sans';
+// Supports weights 200-800
+import '@fontsource-variable/bricolage-grotesque';
+
 // Create a new router instance
 const router = createRouter({
   routeTree,

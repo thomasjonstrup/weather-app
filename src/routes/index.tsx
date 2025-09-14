@@ -3,20 +3,27 @@ import logo from '../assets/images/logo.svg';
 import { OPEN_METEO_URL, SITE } from '@/lib/constants';
 import { DropdownMenu, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
+import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
 import { DropdownMenuContent } from '@radix-ui/react-dropdown-menu';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import type { WeatherData } from '@/lib/types';
 
 export const Route = createFileRoute('/')({
   component: App,
 })
 
 function App() {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null)
 
   useEffect(() => {
     fetch(`${OPEN_METEO_URL}?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`).then(res => res.json()).then(data => {
       console.log(data);
-    })
+      setWeatherData(data);
+    }).catch(err => { console.error(err);   })
   }, []);
+
+  console.log('weatherData', weatherData)
 
   return (
     <div className="min-h-screen bg-background flex flex-col text-foreground text-[calc(10px+2vmin)]">
@@ -43,6 +50,19 @@ function App() {
       </header>
       <main className='flex-1 p-4 py-8'>
         <h1 className='text-center text-4xl'>How's the sky looking today?</h1>
+
+        <div className="flex gap-4 justify-center">
+          <Input type="text" placeholder="Search for a city, e.g., New York" className="border border-gray-300 rounded-md p-2" />
+          <Button>Search</Button>
+        </div>
+
+        <div className="grid">
+            <Card>
+              <CardContent>
+                <p>{weatherData?.current.temperature_2m} {weatherData?.current_units.temperature_2m}</p>
+              </CardContent>
+            </Card>
+        </div>
   {/*         Units
 
   Switch to Imperial/Metric

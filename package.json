@@ -10,9 +10,12 @@
 		"test": "vitest run",
 		"prepare": "husky",
 		"lint-staged": "lint-staged",
-		"lint:stylelint": "stylelint 'src/**/*.{css,scss}'"
+		"lint:stylelint": "stylelint 'src/**/*.{css,scss}'",
+		"lint:stylelint:fix": "stylelint 'src/**/*.{css,scss}' --fix"
 	},
 	"dependencies": {
+		"@fontsource-variable/bricolage-grotesque": "5.2.9",
+		"@fontsource-variable/dm-sans": "5.2.7",
 		"@radix-ui/react-dropdown-menu": "2.1.16",
 		"@radix-ui/react-slot": "1.2.3",
 		"@tailwindcss/vite": "^4.0.6",

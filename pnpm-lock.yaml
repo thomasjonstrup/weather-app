@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/bricolage-grotesque':
+        specifier: 5.2.9
+        version: 5.2.9
+      '@fontsource-variable/dm-sans':
+        specifier: 5.2.7
+        version: 5.2.7
       '@radix-ui/react-dropdown-menu':
         specifier: 2.1.16
         version: 2.1.16(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -487,6 +493,12 @@ packages:
 
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
+
+  '@fontsource-variable/bricolage-grotesque@5.2.9':
+    resolution: {integrity: sha512-+H89oseYx+BAn7osHJJRXl26c06Kan0Hm7l2iUpot3fRGOS3n3idGfqEkbNLfeDYeIZfs2uSaNxgoSlgYyW37g==}
+
+  '@fontsource-variable/dm-sans@5.2.7':
+    resolution: {integrity: sha512-UbBEnWAdHDatuu+pLk6iYEAv6nfv1tep+DtY5my7KjuU2/91uYlwpQ4zuQpsCs4DJJONt+x+7i/76Xrd/MkYhw==}
 
   '@inquirer/confirm@5.1.16':
     resolution: {integrity: sha512-j1a5VstaK5KQy8Mu8cHmuQvN1Zc62TbLhjJxwHvKPPKEoowSF6h/0UdOpA9DNdWZ+9Inq73+puRq1df6OJ8Sag==}
@@ -3597,6 +3609,10 @@ snapshots:
       react-dom: 19.1.1(react@19.1.1)
 
   '@floating-ui/utils@0.2.10': {}
+
+  '@fontsource-variable/bricolage-grotesque@5.2.9': {}
+
+  '@fontsource-variable/dm-sans@5.2.7': {}
 
   '@inquirer/confirm@5.1.16(@types/node@24.3.1)':
     dependencies:
